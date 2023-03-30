@@ -27,6 +27,6 @@ object WallService {
 
     fun clear() {
         posts = emptyArray()
-        var arrayPostId: Int = 0
+        arrayPostId = 0
     }
 }
