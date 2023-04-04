@@ -20,5 +20,6 @@ data class Post(
     val comments: Comments = Comments(),      //Информация о комментариях к записи, класс с полями
     val copyright: Copyright = Copyright(),    //Информация об источнике
     val likes: Likes = Likes(),                 //Информация о лайках
-    val original: Post? = null          //Ссылка на оригинальный пост, возможно значение null - тогда это оригинальный пост, а не репост. По умолчанию null.
+    val original: Post? = null,          //Ссылка на оригинальный пост, возможно значение null - тогда это оригинальный пост, а не репост. По умолчанию null.
+    var attachPost: Array<Attachment> = emptyArray() //Параметр для Attachments
     )

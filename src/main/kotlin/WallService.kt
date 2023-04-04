@@ -14,12 +14,12 @@ object WallService {
     fun addAttachment(type: String): Attachment {   //Тип файла: archive, image, audio, video, gift, other
         attachId += 1
         val attach: Attachment = when (type) {
-            "image" -> ImageAttachment(attachId)
-            "archive" -> ArchiveAttachment(attachId)
-            "audio" -> AudioAttachment(attachId)
-            "video" -> VideoAttachment(attachId)
-            "gift" -> GiftAttachment(attachId)
-        else -> OtherFilesAttachment(attachId)    // other files
+            "image" -> ImageAttachment(type,image=Image(attachId))
+            "archive" -> ArchiveAttachment(type, archive = Archive(attachId))
+            "audio" -> AudioAttachment(type, audio = Audio(attachId))
+            "video" -> VideoAttachment(type, video = Video(attachId))
+            "gift" -> GiftAttachment(type, gift = Gift(attachId))
+        else -> OtherFilesAttachment(type, other = Other(attachId))    // other files
         }
         attachments +=attach
         println("В массив добавлено вложение с типом $type: ")
