@@ -21,9 +21,10 @@ object WallService {
 
     fun createComment(postId: Int, comment: Comment): Comment {
         val postToComment = findPostById(postId) ?: throw PostNotFoundException("Пост с таким ID: $postId не найден")
-        arrayPostId += 1
-        comments += comment
-        println("Добавлен комментарий: ${comment.content}")
+        arrayCommentsId += 1
+        val copyComment: Comment = comment.copy(id = arrayCommentsId)
+        comments += copyComment
+        println("Добавлен комментарий: ${copyComment.content}")
     return comments.last()
     }
 
