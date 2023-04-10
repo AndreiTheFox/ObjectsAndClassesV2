@@ -1,5 +1,5 @@
-data class AudioAttachment(override val type: String, val audio: Audio): Attachment
-data class Audio (
+data class AudioAttachment(override val type: String, val audio: Audio) : Attachment
+data class Audio(
     val audioId: Long, //Id аудиозаписи
     val ownerId: Int = 0,  //Id того кто загрузил аудиозапись
     val artist: String = "", //Наименование исполнителя

@@ -1,9 +1,13 @@
-import org.junit.Test
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
 import org.junit.Before
+import org.junit.Test
+
 class WallServiceTest {
     @Before
-    fun clearBeforeTest() { WallService.clear()}
+    fun clearBeforeTest() {
+        WallService.clear()
+    }
+
     @Test
     fun addPostIdChanged() {
         val testContent: String = "Это тестовая публикация"
@@ -12,6 +16,7 @@ class WallServiceTest {
 
         assertEquals(1, result.id)
     }
+
     @Test
     fun updateIdExist() {
         val testContent: String = "Это тестовая публикация для проверки обновления поста, когда ID существует в массиве"
@@ -20,6 +25,7 @@ class WallServiceTest {
         val result = WallService.update(testPost.copy(id = 1))
         assertEquals(true, result)
     }
+
     @Test
     fun updateIdNotExist() {
         val testContent: String = "Это тестовая публикация для проверки обновления поста, когда ID существует в массиве"

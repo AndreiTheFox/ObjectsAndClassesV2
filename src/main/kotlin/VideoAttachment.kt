@@ -1,6 +1,6 @@
-data class VideoAttachment (override val type: String,val video: Video): Attachment
-data class  Video (
-    val videoId:Long = 0, //Id видеозаписи
+data class VideoAttachment(override val type: String, val video: Video) : Attachment
+data class Video(
+    val videoId: Long = 0, //Id видеозаписи
     val ownerId: Int = 0,  //Id того кто загрузил видео
     val title: String = "",    //Название видеозаписи
     val description: String = "", // Описание видеозаписи

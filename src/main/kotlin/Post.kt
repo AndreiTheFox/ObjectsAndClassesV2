@@ -17,9 +17,9 @@ data class Post(
     val isPinned: Boolean = false,      //Информация о том, что запись закреплена.(True - закреплена, 0 - нет).
     val markedAsAds: Boolean = false,   //Является ли запись рекламой (True - реклама, 0 - нет).
     val isFavorite: Boolean = false,     //true, если объект добавлен в закладки у текущего пользователя.
-    val comments: Comments = Comments(),      //Информация о комментариях к записи, класс с полями
+    val commentsInfo: CommentsInfo = CommentsInfo(),      //Информация о комментариях к записи, класс с полями
     val copyright: Copyright = Copyright(),    //Информация об источнике
     val likes: Likes = Likes(),                 //Информация о лайках
     val original: Post? = null,          //Ссылка на оригинальный пост, возможно значение null - тогда это оригинальный пост, а не репост. По умолчанию null.
     var attachPost: Array<Attachment> = emptyArray() //Параметр для Attachments
-    )
+)
